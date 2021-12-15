@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { GiftListItemModel } from 'src/app/models';
 
 @Component({
   selector: 'app-gift-list',
   templateUrl: './gift-list.component.html',
   styleUrls: ['./gift-list.component.css']
 })
-export class GiftListComponent implements OnInit {
+export class GiftListComponent {
+
+  @Input()
+  giftList: GiftListItemModel[] | null = [];
 
   constructor() { }
 
-  ngOnInit(): void {
+  markPurchased(item: GiftListItemModel) {
+    console.log('They purchased', item.description);
   }
-
 }

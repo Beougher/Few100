@@ -5,3 +5,14 @@ export interface GiftListItemModel {
   due: string;
   purchased: boolean;
 }
+
+export interface GiftListItemCreate {
+  description: string;
+  for: string;
+  due: string;
+}
+
+export interface DashboardGiftSummaryModel {
+  numberToPurchase: number;
+  items: string[];
+}
